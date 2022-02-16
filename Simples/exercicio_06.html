@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="kmI" placeholder="KM NO INICIO">
+    <input type="text" id="kmF" placeholder="KM NO FINAL">
+    <input type="text" id="litros" placeholder="litros de gasolinas gastos">
+    <input type="text" id="passageiro" placeholder="valor recebido dos passageiros">
+    <button type="button " onclick="valorTotal() ">  </button>
+    <span id="resposta"></span>
+    <span id="resposta2"></span>
+</body>
+</html>
+<script>
+    function valorTotal () {
+      
+      var kmI = parseFloat(document.getElementById("kmI").value);
+      var kmF = parseFloat(document.getElementById("kmF").value);
+      var li = parseFloat(document.getElementById("litros").value);
+      var pa = parseFloat(document.getElementById("passageiro").value);
+
+      var media = (kmI + kmF)/2;
+      var lucro =  (li-pa);
+       document.getElementById("resposta").innerHTML = '<b>media km rodados:</b>' +media;
+       document.getElementById("resposta2").innerHTML =  '<b>lucro liquido:</b>' + lucro;
+      
+    }
+
+</script>

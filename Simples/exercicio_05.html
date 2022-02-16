@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="largura" placeholder="Quantidade de largura">
+    <input type="text" id="comprimento" placeholder="Quantidade de comprimento">
+    <input type="text" id="altura" placeholder="Quantidade de altura">
+   
+    <button type="button" onclick="caixasDeAzuleijos()">calcular</button>
+</form>
+       <span id="resposta"></span>
+</body>
+
+</html>
+
+<script>
+    function caixasDeAzuleijos() {
+
+       var l =parseFloat(document.getElementById("largura").value);
+       var com =parseFloat(document.getElementById("comprimento").value);
+       var a =parseFloat(document.getElementById("altura").value);
+          
+       var r1 =(comp*a*l);
+       var resultado = (r1/1.5);
+       document.getElementById("resposta").innerHTML = '<b>Resposta:</b>' + resultado
+    }
+
+</script>

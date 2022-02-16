@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="numero" placeholder="Digite a senhar">       
+         <button type="button" onclick=" iniciar()">Concluir</button>
+    </form>
+    <span id="saida"></span>
+</body>
+</html>
+  <script>
+      function iniciar() {
+        var s = parseInt(document.getElementById("numero").value);
+        if(s == 1234) { 
+              document.getElementById("saida").innerHTML = '<b>ACESSO PERMITIDO</b>' }
+       else {
+        document.getElementById("saida").innerHTML = '<b>ACESSO NEGADO</b>' }
+      } 
+  </script>

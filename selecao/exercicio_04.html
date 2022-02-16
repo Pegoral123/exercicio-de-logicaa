@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    14) Escreva um programa para ler o número de gols marcados pelo Grêmio e o número de gols
+    marcados pelo Inter em um GRENAL. Escrever o nome do vencedor. Caso não haja vencedor deverá
+    ser impressa a palavra EMPATE.
+    
+
+    <form>
+        <input type="text" id="gol1" placeholder="numero de gols do palmeiras">
+        <input type="text" id="gol2" placeholder="numero de gols do flamengo">
+         <button type="button" onclick=" principal()">calcura</button>
+    </form>
+    <span id="saida"></span>
+    
+</body>
+</html>
+ <script>
+    function principal() {
+       var gol1 =parseInt(document.getElementById("gol1").value);
+       var gol2 = parseInt(document.getElementById("gol2").value);
+
+         document.getElementById("saida").innerHTML = calcularValores(gol1,gol2)
+    }
+
+    function calcularValores(gol1=0, gol2=0) {
+         
+        var resultado = '' 
+        
+         if (gol1 > gol2) {
+             resultado = "<b>Vencedo Palmeiras</b>"      
+         } else if(gol1 == gol2){
+             resultado = "<b>empate</b>"  
+         } else{
+             resultado = "<b>Vencedo flamengo</b>"  
+         }
+         
+         return resultado;
+    }
+
+ </script>

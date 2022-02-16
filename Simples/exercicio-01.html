@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+      <input type="text" id="raio" placeholder="digite tamanho do raio">
+    <button type="button" onclick="SomaDoRaio()">calcular</button>
+    
+    </form>
+      <span id="resposta"></span>
+  
+</body>
+
+</html>
+
+<script>
+   function SomaDoRaio() {
+      var r = parseFloat(document.getElementById("raio").value);
+       var resposta = 3.14 *(r * r);
+         document.getElementById("resposta").innerHTML= '<b>Resposta:</b>' + resposta;
+   }
+
+</script>

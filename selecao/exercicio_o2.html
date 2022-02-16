@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que
+diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).</b>
+    <form>
+        <input type="text" id="idade" placeholder="Digite sua idade atual">      
+         <button type="button" onclick=" iniciar()">Iniciar</button>
+    </form>
+    <span id="saida"></span>
+</body>
+</html>
+   <script>
+      function iniciar() {
+        var idade = parseInt(document.getElementById("idade").value);
+          if(idade > 17) { 
+              document.getElementById("saida").innerHTML = 'Senhor(A) podera vota esse anor' }
+       else {
+        document.getElementById("saida").innerHTML = 'Senhor(A) não podera votar esse ano' }
+      }
+
+   </script>

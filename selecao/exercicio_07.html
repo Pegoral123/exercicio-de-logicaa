@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="v1" placeholder="NUMERO 1">
+
+        <input type="text" id="v2" placeholder="NUMERO 2 "> 
+
+         <button type="button" onclick="iniciar()">calcular</button>
+    </form>
+
+    <span id="saida"></span>
+
+    <span id="saida2"></span>
+
+    <span id="saida3"></span>
+
+    <span id="saida4"></span>
+
+</body>
+</html>
+<script>
+
+    function iniciar(){
+        var v1 = parseInt(document.getElementById("v1").value);
+        var v2 = parseInt(document.getElementById("v2").value);
+         
+          document.getElementById('saida').innerHTML = calcularValores(v1,v2)
+
+          document.getElementById('saida2').innerHTML = calcularValores2(v1,v2)
+
+          document.getElementById('saida3').innerHTML = calcularValores3(v1,v2)
+
+          document.getElementById('saida4').innerHTML = calcularValores4(v1,v2)
+
+    }
+
+        function calcularValores(v1=0, v2=0) {           
+            var cal1 = v1 + v2               
+            return cal1      
+    }
+        function calcularValores2(v1=0, v2=0) {                 
+             var cal2 = v1 * v2                                  
+             return cal2          
+     }
+       function calcularValores3(v1=0, v2=0) {           
+             var cal3 = v1 / v2            
+             return cal3           
+    }
+       function calcularValores4(v1=0, v2=0) {          
+             var cal4 = v1 - v2          
+             return cal4
+     }
+
+</script>
