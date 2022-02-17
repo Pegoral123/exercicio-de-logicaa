@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    6) Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em
-cm). Calcular e imprimir o seguinte:
 
-6) Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso.
-- Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.
-- Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
-Observação: Considere que o usuário poderá informar qualquer valor para o número de lados.
+<body>
+    6) Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte: 6) Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso. - Caso o número de lados seja inferior
+    a 3 escrever NÃO É UM POLÍGONO. - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO. Observação: Considere que o usuário poderá informar qualquer valor para o número de lados.
 
 
     <form>
         <input type="text" id="L" placeholder="lados de um poligono">
-        <input type="text" id="m" placeholder="medida "> 
+        <input type="text" id="m" placeholder="medida ">
 
-         <button type="button" onclick="iniciar()">calcular</button>
+        <button type="button" onclick="iniciar()">calcular</button>
     </form>
     <span id="saida"></span>
-    
+
 </body>
+
 </html>
 <script>
     function iniciar() {
 
         var L = parseInt(document.getElementById("L").value);
         var m = parseInt(document.getElementById("m").value);
-            document.getElementById("saida").innerHTML = calcularValores(L,m);
+        document.getElementById("saida").innerHTML = calcularValores(L, m);
     }
-    function calcularValores(L = 0, m=0 ){ 
-    var per =   m  * 3
-    var area =  m * 2
-    
-     if (L == 3) {
-        return "TRIANGULO" + "Perimentro:" + per  + "cm";
-     } else if (L == 4) {
-          return "Quadrado" + "Area:" + area + "cm";
-     }
 
-     else if(L>5) {
-        return "POLÍGONO NÃO IDENTIFICADO."
-       }
+    function calcularValores(L = 0, m = 0) {
+        var per = m * 3
+        var area = m * 2
 
-       if (L<3){
-           return " NÃO É UM POLÍGONO."
-       }
+        if (L == 3) {
+            return "TRIANGULO" + "Perimentro:" + per + "cm";
+        } else if (L == 4) {
+            return "Quadrado" + "Area:" + area + "cm";
+        } else if (L > 5) {
+            return "POLÍGONO NÃO IDENTIFICADO."
+        }
 
-       else   {
-        return "PENTAGONO"
-       }
+        if (L < 3) {
+            return " NÃO É UM POLÍGONO."
+        } else {
+            return "PENTAGONO"
+        }
 
-                     
+
     }
 </script>

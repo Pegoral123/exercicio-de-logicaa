@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="L" placeholder="Informe medida de lados">
+        <input type="text" id="L2" placeholder="Informe medida de lados">
+        <input type="text" id="L3" placeholder="Informe medida de lados">
+        <button type="button" onclick="iniciar()">calcular</button>
+    </form>
+    <span id="saida"></span>
+
+</body>
+
+</html>
+<script>
+    function iniciar() {
+
+        var L = parseInt(document.getElementById("L").value);
+        var L2 = parseInt(document.getElementById("L2").value);
+        var L3 = parseInt(document.getElementById("L3").value);
+        console.log(L, L2, L3)
+        document.getElementById("saida").innerHTML = calcularValores(L, L2, L3)
+    }
+
+    function calcularValores(L = 0, L2 = 0, L3 = 0) {
+
+
+
+    }
+</script>
