@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+
+        <input type="text" id="A" placeholder="Digite um numero2">
+        <input type="text" id="B" placeholder="Digite um numero">
+        <input type="text" id="C" placeholder="Digite um numero">
+        <button type="button" onclick="iniciar()">Concluir</button>
+    </form>
+    <span id="saida"></span>
+
+</body>
+
+
+</html>
+<script>
+    function iniciar() {
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value);
+        var C = parseInt(document.getElementById("C").value);
+
+        document.getElementById("saida").innerHTML = calcularValores(A, B, C);
+    }
+
+    function calcularValores(A = 0, B = 0, C = 0) {
+
+        var x = 0;
+
+        if (A > B) {
+            x = A;
+            A = B;
+            B = x;
+        }
+
+        if (A > C) {
+            x = C;
+            C = A;
+            A = x;
+        }
+        return C + B
+    }
+</script>

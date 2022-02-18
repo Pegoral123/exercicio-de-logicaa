@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    9) As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem
-compradas pelo menos doze. Escreva um programa que leia o número de maçãs compradas, calcule e
-escreva o valor total da compra.
+    9) As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o valor total da compra.
 
     <form>
-        <input type="text" id="maca" placeholder="Digite um quantida de maçãs">      
-         <button type="button" onclick=" iniciar()"> iniciar</button>
+        <input type="text" id="maca" placeholder="Digite um quantida de maçãs">
+        <button type="button" onclick=" iniciar()"> iniciar</button>
     </form>
     <span id="saida"></span>
 </body>
-</html>
-  
-   <script>
-       function iniciar() {  
-       var m = parseFloat(document.getElementById("maca").value);
-         var cal1 = m * 0.30
-         var cal2 = m * 0.25
 
-         if(m > 11) { 
-              document.getElementById("saida").innerHTML = 'Preço:'+ cal2 }
-       else {
-        document.getElementById("saida").innerHTML = 'Preço' + cal1 }
-      } 
-              
-   </script>
+</html>
+
+<script>
+    function iniciar() {
+        var m = parseFloat(document.getElementById("maca").value);
+        var cal1 = m * 0.30
+        var cal2 = m * 0.25
+
+        if (m > 11) {
+            document.getElementById("saida").innerHTML = 'Preço:' + cal2
+        } else {
+            document.getElementById("saida").innerHTML = 'Preço' + cal1
+        }
+    }
+</script>
+
+if (A > B) { x = A A = B B = X } else if (B > C) { X = B B = C C = X } if (C>B) { return }
