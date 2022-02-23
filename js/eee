@@ -8,3 +8,13 @@
                    document.getElementById('saida')= innerHTML= calculos.resultado
 
               );
+
+
+
+
+              calculo.iniciar(
+                   document.getElementById('v1').value,
+                   document.getElementById('v2').value,
+                   document.getElementById('op').value,    
+
+        );saida(calculo.calcularValores())"

@@ -3,7 +3,7 @@ const calculo = {
     cal1: 0,
     cal2: 0,
     escolha: 0,
-    resultado: 0,
+    resultado: '',
     iniciar: function(v1 = 0, v2 = 0, op = 0) {
         this.cal1 = parseInt(v1);
         this.cal2 = parseInt(v2);
@@ -19,13 +19,13 @@ const calculo = {
         var cal4 = this.cal1 - this.cal2
 
         if (this.escolha == 1) {
-            this.resultado = cal6
+            return this.resultado = cal6;
         } else if (this.escolha == 2) {
-            this.resultado = cal5
+            return this.resultado = cal5;
         } else if (this.escolha == 3) {
-            this.resultado = cal3
+            return this.resultado = cal3;
         } else if (this.escolha == 4) {
-            this.resultado = cal4
+            return this.resultado = cal4;
         }
 
     }
