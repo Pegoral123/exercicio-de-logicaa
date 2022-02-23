@@ -5,36 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seleção - 21</title>
 </head>
+<script src="../js/triangulo.js"></script>
 
 <body>
-
+    <p>21) Escreva um programa que leia as medidas dos lados de um triângulo e escreva se ele é Equilátero, Isósceles ou Escaleno. Sendo que: - Triângulo Equilátero: possui os 3 lados iguais. - Triângulo Isósceles: possui 2 lados iguais. - Triângulo Escaleno:
+        possui 3 lados diferentes
+    </p>
     <form>
-        <input type="text" id="L" placeholder="Informe medida de lados">
-        <input type="text" id="L2" placeholder="Informe medida de lados">
-        <input type="text" id="L3" placeholder="Informe medida de lados">
-        <button type="button" onclick="iniciar()">calcular</button>
+        <input type="number" id="LA" placeholder="Lado A">
+        <input type="number" id="LB" placeholder="Lado B">
+        <input type="number" id="LC" placeholder="Lado C">
+        <button type="button" onclick="triangulo.pegarValores(); saida(triangulo.tipoTriangulo())">Verificar</button>
     </form>
     <span id="saida"></span>
-
 </body>
 
 </html>
-<script>
-    function iniciar() {
-
-        var L = parseInt(document.getElementById("L").value);
-        var L2 = parseInt(document.getElementById("L2").value);
-        var L3 = parseInt(document.getElementById("L3").value);
-        console.log(L, L2, L3)
-        document.getElementById("saida").innerHTML = calcularValores(L, L2, L3)
-    }
-
-    function calcularValores(L = 0, L2 = 0, L3 = 0) {
-
-
-
-
-    }
-</script>

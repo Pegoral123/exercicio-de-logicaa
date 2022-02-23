@@ -1,0 +1,10 @@
+ calculos.iniciar(
+                   document.getElementById('v1').value,
+                   document.getElementById('v2').value,
+                   document.getElementById('op').value,
+              );
+              calculos.calcularValores(
+              
+                   document.getElementById('saida')= innerHTML= calculos.resultado
+
+              );

@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="/js/calculo.js"></script>
 
 <body>
     7) Escreva um programa para ler 2 valores inteiros e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). Calcular e escrever o resultado dessa operação sobre os dois valores
     lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4.
 
     <form>
-        <input type="text" id="v1" placeholder="NUMERO 1">
-        <input type="text" id="v2" placeholder="NUMERO 2 ">
+        <input type="number" id="v1" placeholder="NUMERO 1">
+        <input type="number" id="v2" placeholder="NUMERO 2 ">
 
         <select id="op" name="op">
             <option value="1">adição</option>
@@ -22,38 +23,14 @@
             <option value="3">divisao</option>
             <option value="4">subtração</option>
         </select>
+        <button type="button" onclick="calculo.iniciar(
+                   document.getElementById('v1').value,
+                   document.getElementById('v2').value,
+                   document.getElementById('op').value,    
 
-        <button type="button" onclick="iniciar()">calcular</button>
+        );saida(calculo.calcularValores())">calcular</button>
     </form>
-
-
     <span id="saida"></span>
 </body>
 
 </html>
-<script>
-    function iniciar() {
-        var v1 = parseInt(document.getElementById("v1").value);
-        var v2 = parseInt(document.getElementById("v2").value);
-        var op = parseInt(document.getElementById("op").value);
-
-        document.getElementById('saida').innerHTML = calcularValores(v1, v2, op)
-        console.log(v1, v2, op)
-    }
-
-    function calcularValores(v1 = 0, v2 = 0, op = 0) {
-        var cal1 = v1 + v2
-        var cal2 = v1 * v2
-        var cal3 = v1 / v2
-        var cal4 = v1 - v2
-
-        if (op == 1) {
-            return cal1
-        } else if (op == 2) {
-            return cal2
-        } else if (op == 3) {
-            return cal3
-        }
-        return cal4
-    }
-</script>
